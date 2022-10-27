@@ -11,9 +11,13 @@ resource "google_project" "project" {
 
   skip_delete = var.skip_delete ? true : false
 }
+output "number" {
+  value = google_project.project.number
+}
 output "project" {
   value = google_project.project
 }
+
 
 resource "google_project_service" "services" {
   for_each = toset(var.services)
