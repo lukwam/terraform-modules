@@ -24,5 +24,5 @@ resource "google_project_service" "services" {
   disable_on_destroy         = true
 }
 output "services" {
-  value = google_project_services.services
+  value = google_project_service.services
 }
