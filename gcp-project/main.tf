@@ -9,6 +9,7 @@ variable "folder_id" {
 variable "labels" {
   description = "A set of key/value label pairs to assign to the project."
   type        = map(any)
+  default     = {}
 }
 variable "project_id" {
   description = "The project ID."
